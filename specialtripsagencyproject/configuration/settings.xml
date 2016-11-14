@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <localRepository>/Users/ddoyle/.m2/repository</localRepository>
+  <servers>
+    <server>
+      <username>deployment</username>
+      <password>deployment123</password>
+      <id>openshift-releases</id>
+    </server>
+    <server>
+      <username>deployment</username>
+      <password>deployment123</password>
+      <id>openshift-snapshots</id>
+    </server>
+  </servers>
+  <profiles>
+    <profile>
+      <repositories>
+        <repository>
+          <releases>
+          	<!-- Need to set this to always, as we currently allow re-deployments of builds. -->
+            <updatePolicy>always</updatePolicy>
+          </releases>
+          <snapshots>
+            <updatePolicy>never</updatePolicy>
+          </snapshots>
+          <id>openshift-releases</id>
+          <name>OpenShift Releases Maven Repository</name>
+          <url>http://nexus-bpms-travel-agency.127.0.0.1.xip.io/content/repositories/releases/</url>
+        </repository>
+        <repository>
+          <releases>
+          	<updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+          <id>openshift-snapshots</id>
+          <name>OpenShift Snapshots Maven Repository</name>
+          <url>http://nexus-bpms-travel-agency.127.0.0.1.xip.io/content/repositories/snapshots/</url>
+        </repository>
+      </repositories>
+      <id>openshift</id>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>openshift</activeProfile>
+  </activeProfiles>
+  <pluginGroups>
+    <pluginGroup>org.kie</pluginGroup>
+  </pluginGroups>
+</settings>
