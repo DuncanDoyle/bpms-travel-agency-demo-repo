@@ -813,7 +813,7 @@ System.out.println("Leaving " + kcontext.getNodeInstance().getNodeName() +" Node
       <bpmn2:dataInputAssociation id="_0v6TClsnEeaIg7vKOCJn6w">
         <bpmn2:targetRef>_5375B80A-EE19-4F69-85DE-FA69583D719A_UrlInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_0v6TC1snEeaIg7vKOCJn6w">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_0v6TDFsnEeaIg7vKOCJn6w"><![CDATA[http://#{System.getProperty("webservice_host")}:#{System.getProperty("webservice_port")}/acme-flight-service-1.0/AcmeDemoInterface?wsdl]]></bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_0v6TDFsnEeaIg7vKOCJn6w"><![CDATA[http://#{System.getProperty("service.flight.host")}:#{System.getProperty("service.flight.port")}/acme-flight-service-1.0/AcmeDemoInterface?wsdl]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_0v6TDVsnEeaIg7vKOCJn6w">_5375B80A-EE19-4F69-85DE-FA69583D719A_UrlInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
