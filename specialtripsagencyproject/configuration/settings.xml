@@ -2,7 +2,6 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-
 	<servers>
 		<server>
 			<username>deployment</username>
@@ -15,7 +14,6 @@
 			<id>openshift-snapshots</id>
 		</server>
 	</servers>
-
 
 	<mirrors>
    <!-- ### configured mirrors ### -->
@@ -294,7 +292,7 @@
 					</snapshots>
 					<id>openshift-releases</id>
 					<name>OpenShift Releases Maven Repository</name>
-					<url>http://nexus-bpms-travel-agency.127.0.0.1.xip.io/content/repositories/releases/</url>
+					<url>http://nexus:8081/content/repositories/releases/</url>
 				</repository>
 				<repository>
 					<releases>
@@ -305,7 +303,7 @@
 					</snapshots>
 					<id>openshift-snapshots</id>
 					<name>OpenShift Snapshots Maven Repository</name>
-					<url>http://nexus-bpms-travel-agency.127.0.0.1.xip.io/content/repositories/snapshots/</url>
+					<url>http://nexus:8081/content/repositories/snapshots/</url>
 				</repository>
 			</repositories>
 			<id>openshift</id>
